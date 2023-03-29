@@ -1,506 +1,1235 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="en">
 
 <head>
-	<title>Homerun.ua</title>
+	<title>RiskVille</title>
 	<meta charset="UTF-8">
 	<meta name="format-detection" content="telephone=no">
 	<!-- <style>body{opacity: 0;}</style> -->
-	<link rel="stylesheet" href="css/style.min.css?_v=20220719134806">
+	<link rel="stylesheet" href="css/style.min.css?_v=20230329174350">
+	<link rel="shortcut icon" href="favicon.ico">
 	<!-- <meta name="robots" content="noindex, nofollow"> -->
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="preconnect" href="https://fonts.googleapis.com">
-	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-	<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;1,700&display=swap&_v=20220719134806"
-		rel="stylesheet">
-	<link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css?_v=20220719134806">
 </head>
 
 <body>
 	<div class="wrapper">
-		<header class="header">
-			<div class="header__container">
-				<div class="header__inner">
-					<a class="header__logo" href="#index.html">
-						<img src="img/logo.svg?_v=1658227686739" alt="">
-					</a>
-					<div class="header__menu menu">
-						<nav class="menu__body">
-							<ul class="menu__list">
-								<li class="menu__item"><a href="" class="menu__link">Product</a></li>
-								<li class="menu__item"><a href="" class="menu__link">Templates</a></li>
-								<li class="menu__item"><a href="" class="menu__link">Pricing</a></li>
-								<li class="menu__item"><a href="" class="menu__link">Customers</a></li>
-								<li class="menu__item"><a href="" class="menu__link">Learn</a></li>
-							</ul>
-						</nav>
+		<div class="header__full-screen">
+			<header class="header">
+				<div class="header__container">
+					<div class="header-top">
+						<div class="header-top__logo">
+							<a href=""><img src="img/logo-img.svg" alt="logo" data-goto-header data-goto=".header__full-screen"></a>
+						</div>
+						<div class="header-top__menu menu">
+							<nav class="menu__body">
+								<ul class="menu__list">
+									<div class="header-top__logo2">
+										<a href=""><img src="img/logo-img.svg" alt="logo" data-goto-header data-goto=".header__full-screen"></a>
+									</div>
+									<li class="menu__item">
+										<a data-goto-header data-goto=".about-page" href="#about-page" class="menu__link">
+											About
+										</a>
+									</li>
+									<li class="menu__item">
+										<a data-goto-header data-goto=".problem-page" href="#problem-page" class="menu__link">
+											Problem
+										</a>
+									</li>
+									<li class="menu__item">
+										<a href="#" class="menu__link">
+											Solution
+										</a>
+									</li>
+									<li class="menu__item">
+										<a data-goto-header data-goto=".benefits-page" href="#benefits-page" class="menu__link">
+											Benefits
+										</a>
+									</li>
+									<li class="menu__item">
+										<a data-goto-header data-goto=".why-riskVille-page" href="#why-riskVille-page" class="menu__link">
+											Testimonials
+										</a>
+									</li>
+
+									<li class="menu__item">
+										<a data-goto-header data-goto=".contacts-page" href="#contacts-page" class="menu__link">
+											Contacts
+										</a>
+									</li>
+									<li class="menu__item">
+										<a href="news.html" class="menu__link">News</a>
+									</li>
+									<button type="button" class="menu__icon-second icon-menu-second"><span></span></button>
+								</ul>
+							</nav>
+						</div>
+						<a class="menu__button" data-goto-header data-goto=".contacts-page" href="#contacts-page">Schedule a
+							Demo</a>
+						<button type="button" class="menu__icon icon-menu"><span></span></button>
 					</div>
-					<div class="header__button">
-						<a data-popup="#log_in" href="#" class="header__btn btn__white" id="popup">Log in</a>
-						<a href="#" class="header__btn btn__blue" data-da=".menu__body, 599.98">Start free trial</a>
+				</div>
+			</header>
+			<section class="header-bottom">
+				<div class="header-bottom__container">
+					<div class="header-bottom__body body__botton">
+						<h1 class="body__botton-title">
+							Cloud Solution for Risk
+							and Insurance Management
+						</h1>
+						<p class="body__botton-subtitle">
+							RiskVille can help you automate core routine tasks within policy, claims and risk management
+						</p>
+						<a data-goto-header data-goto=".contacts-page" href="#contacts-page" class="body__botton-btn">Schedule a
+							Demo</a>
 					</div>
-					<button type="button" class="menu__icon icon-menu"><span></span></button>
+				</div>
+				<div class="header-bottom__bg-line">
+					<picture><source srcset="img/bg-line.webp" type="image/webp"><img src="img/bg-line.png" alt="" width="100%"></picture>
+				</div>
+				<div class="header-bottom__bg-bridge">
+				</div>
+			</section>
+		</div>
+		<div id="popup" aria-hidden="true" class="popup">
+			<div class="popup__wrapper">
+				<div class="popup__content">
+					<div class="popup__top">
+						<div class="popup__title">
+							Get Case Study
+						</div>
+						<button data-close type="button" class="popup__close"><span></span></button>
+					</div>
+					<form action="#" class="popup-form">
+						<div class="popup-form__subtitle">
+							<p>
+								Please fill the form below and will send the case study directly on your email
+							</p>
+						</div>
+						<div class="form-group">
+							<input type="text" id="name" class="form-input">
+							<label for="name" class="form-label">Name</label>
+							<div class="form-input-underline"></div>
+						</div>
+						<div class="form-group">
+							<input type="email" id="email" class="form-input" required data-validate data-required="email" data-required="email" data-error="Enter the correct Email">
+							<label for="email" class="form-label">Email</label>
+							<div class="form-input-underline"></div>
+						</div>
+						<div class="popup-form__button">
+							<button class="popup-form__btn">Get My Copy</button>
+						</div>
+					</form>
 				</div>
 			</div>
-		</header>
+		</div>
 		<main class="page">
-			<section class="together">
-				<div class="together__container">
-					<div class="together__title">
-						<h3>
-							Where hiring comes together.
-						</h3>
-					</div>
-					<div class="together__form form-together">
-						<div class="form-together__text">
-							<p>
-								Everything you need to organise your hiring and make a great impression.
-							</p>
-						</div>
-						<div class="form-together__input">
-							<input autocomplete="off" type="email" name="form[]" data-error="Ошибка"
-								placeholder="Work email" class="together__input">
-							<button type="submit" class="button btn__blue">Start free trial</button>
-						</div>
-					</div>
-					<div class="together__text">
-						<p>
-							Join thousands of teams hiring with Homerun
-						</p>
-					</div>
-					<div class="together__items">
-						<div class="together__item item-together ">
-							<img class="item-together__icon" src="img/together_1.svg?_v=1658227686739" alt="">
-						</div>
-						<div class="together__item item-together ">
-							<img class="item-together__icon" src="img/together_2.svg?_v=1658227686739" alt="">
-						</div>
-						<div class="together__item item-together ">
-							<img class="item-together__icon" src="img/together_3.svg?_v=1658227686739" alt="">
-						</div>
-						<div class="together__item item-together ">
-							<img class="item-together__icon" src="img/together_4.svg?_v=1658227686739" alt="">
-						</div>
-						<div class="together__item item-together ">
-							<img class="item-together__icon" src="img/together_5.svg?_v=1658227686739" alt="">
-						</div>
-						<div class="together__item item-together ">
-							<img class="item-together__icon" src="img/together_6.svg?_v=1658227686739" alt="">
-						</div>
-						<div class="together__item item-together ">
-							<img class="item-together__icon" src="img/together_7.svg?_v=1658227686739" alt="">
-						</div>
-					</div>
-				</div>
-			</section>
-			<section class="homerun">
-				<div class="homerun__container">
-					<div class="homerun__title">
-						<h3>
-							How Homerun works
-						</h3>
-					</div>
-					<div class="homerun__video">
-						<picture>
-							<source srcset="img/homeRunVid.webp" type="image/webp"><img
-								src="img/homeRunVid.png?_v=1658227686739" alt="" width="100%">
-						</picture>
-					</div>
-					<div class="homerun__play">
-						<img src="img/homerun_pl.svg?_v=1658227686739" alt="">
-						<span>Watch: Homerun in 90 seconds</span>
-					</div>
-				</div>
-			</section>
-			<section class="team">
-				<div class="team-top">
-					<div class="team-top__container">
-						<div class="team-top__row">
-							<div class="team-top__body body-top">
-								<div class="body-top__subtitle">
-									<h4>Hire</h4>
+			<section class="about-page" id="about-page">
+				<div class="about-page__container">
+					<div class="about-page__body  body-page">
+						<div class="body-page__items">
+							<div class="body-page__item item-page" data-watch-threshold="0.5" data-watch data-watch-once>
+								<div class="item-page__title">
+									<span>01.</span>
+									<h3>Automate Operations</h3>
 								</div>
-								<div class="body-top__title">
-									<h3>An all-in-one tool for your entire team.</h3>
-								</div>
-								<div class="body-top__text">
+								<div class="item-page__subtitle">
 									<p>
-										No more ping-ponging between emails, spreadsheets, and other apps. Bring
-										everything together in one place.
+										We understand your business and know how important it is to see not only the
+										whole picture of the business results but also to carry out carefully and
+										accurately daily operations. Free up your people from doing monkey job and let
+										RiskVille automate their routine.
 									</p>
 								</div>
-								<a class="body-top__button btn__white" href="#">Learn more</a>
 							</div>
-							<div class="team-top__bg">
-								<picture>
-									<source srcset="img/team-top_bg.webp" type="image/webp"><img
-										src="img/team-top_bg.png?_v=1658227686739" alt="" width="100%">
-								</picture>
-								<span>
-									All your jobs, candidates, messages and notes in one place.
-								</span>
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="team-bottom">
-					<div class="team-bottom__container">
-						<div class="team-bottom__row">
-							<div class="team-bottom__bg">
-								<picture>
-									<source srcset="img/team-bottom_bg.webp" type="image/webp"><img
-										src="img/team-bottom_bg.png?_v=1658227686739" alt="" width="100%">
-								</picture>
-								<span>
-									Career page created with Homerun.
-								</span>
-							</div>
-							<div class="team-bottom__body body-bottom">
-								<div class="body-bottom__subtitle">
-									<h4>Create</h4>
+							<div class="body-page__item item-page" data-watch-threshold="0.5" data-watch data-watch-once>
+								<div class="item-page__title">
+									<span>02.</span>
+									<h3>Get More <br> Happy Clients</h3>
 								</div>
-								<div class="body-bottom__title">
-									<h3>An experience candidates simply love.</h3>
-								</div>
-								<div class="body-bottom__text">
+								<div class="item-page__subtitle">
 									<p>
-										Treat candidates with a rich career site, beautiful job posts, tailored
-										application forms and faster response times.
+										Your clients are like you and us. They expect to be served quickly and
+										professionally. You can exceed their expectations by providing access to
+										policies and claims via a simple online interface or friendly remind them about
+										renewals
 									</p>
 								</div>
-								<div class="body-bottom__button btn__white">Learn more</div>
 							</div>
-						</div>
-					</div>
-				</div>
-			</section>
-			<section class="join">
-				<div class="join__container">
-					<div class="join__body body-join">
-						<a class="body-join__icon" href="#">
-							<picture>
-								<source srcset="img/join_icon.webp" type="image/webp"><img
-									src="img/join_icon.png?_v=1658227686739" alt="">
-							</picture>
-						</a>
-						<div class="body-join__title">
-							<h3>
-								Join the club.
-							</h3>
-						</div>
-						<div class="body-join__text">
-							<p>
-								Homerun customers share a passion for culture, design and innovation.
-								We all agree hiring can be more meaningful and personal.
-							</p>
-						</div>
-						<a href="#" class="body-join__button">About our customers</a>
-					</div>
-					<div class="swiper">
-						<div class="swiper-wrapper">
-							<div class="swiper-slide">
-								<div class="join-body body-join">
-									<picture>
-										<source srcset="img/join-slider_swiper_1.webp" type="image/webp"><img
-											class="body-join__img" src="img/join-slider_swiper_1.png?_v=1658227686739"
-											alt="" width="100%">
-									</picture>
-									<div class="body-join__info info-body">
-										<div class="info-body__logo">
-											<picture>
-												<source srcset="img/info-join_logo.webp" type="image/webp"><img
-													src="img/info-join_logo.png?_v=1658227686739" alt="">
-											</picture>
-										</div>
-										<div class="info-body__text">
-											<p>
-												“You don't need to be a pro in HR or even in Homerun to be able to use
-												it. It's so easy that anyone in the team can figure it out.”
-											</p>
-											<h4>Isabel Machielse</h4>
-											<p>People & Culture Coordinator</p>
-										</div>
-										<a class="info-body__btn" href="#">About our customers</a>
-									</div>
+							<div class="body-page__item item-page" data-watch-threshold="0.5" data-watch data-watch-once>
+								<div class="item-page__title">
+									<span>03.</span>
+									<h3>Be <br> Compliant</h3>
 								</div>
-							</div>
-							<div class="swiper-slide">
-								<div class="join-body body-join">
-									<picture>
-										<source srcset="img/golf.webp" type="image/webp"><img class="body-join__img"
-											src="img/golf.jpg?_v=1658227686739" alt="" width="100%">
-									</picture>
-									<div class="body-join__info info-body">
-										<div class="info-body__logo">
-											<picture>
-												<source srcset="img/info-join_logo.webp" type="image/webp"><img
-													src="img/info-join_logo.png?_v=1658227686739" alt="">
-											</picture>
-										</div>
-										<div class="info-body__text">
-											<p>
-												Lorem ipsum dolor sit amet, consectetur adipisicing elit. Culpa vel
-												consectetur aperiam maxime aliquid
-											</p>
-											<h4>Isabel Machielse</h4>
-											<p>People & Culture Coordinator</p>
-										</div>
-										<a class="info-body__btn" href="#">About our customers</a>
-									</div>
-								</div>
-							</div>
-							<div class="swiper-slide">
-								<div class="join-body body-join">
-									<picture>
-										<source srcset="img/skoda.webp" type="image/webp"><img class="body-join__img"
-											src="img/skoda.jpeg?_v=1658227686739" alt="" width="100%">
-									</picture>
-									<div class="body-join__info info-body">
-										<div class="info-body__logo">
-											<picture>
-												<source srcset="img/info-join_logo.webp" type="image/webp"><img
-													src="img/info-join_logo.png?_v=1658227686739" alt="">
-											</picture>
-										</div>
-										<div class="info-body__text">
-											<p>
-												“You don't need to be a pro in HR or even in Homerun to be able to use
-												it. It's so easy that anyone in the team can figure it out.”
-											</p>
-											<h4>Isabel Machielse</h4>
-											<p>People & Culture Coordinator</p>
-										</div>
-										<a class="info-body__btn" href="#">About our customers</a>
-									</div>
-								</div>
-							</div>
+								<div class="item-page__subtitle">
+									<p>
 
+										We all have audits and want to meet auditors with the smile feeling secure and
+										compliant. Improve compliance by making audit processes more straightforward.
+										RiskVille is GDPR compliant and hosted on the safe and secure Microsoft Azure
+										platform ensures safety and security for your data and processes.
+
+									</p>
+								</div>
+							</div>
 						</div>
-						<div class="swiper-button-next"></div>
+					</div>
+				</div>
+			</section>
+			<section class="problem-page" id="problem-page">
+				<div class="problem-page__container">
+					<div class="problem-page__body problem-body">
+						<div class="problem-body body-swipp">
+							<div class="body-swipp__slider swiper">
+								<div class="body-swipp__wrapper swiper-wrapper">
+									<div class="body-swipp__slide swiper-slide">
+										<div class="swiper-slide__img">
+											<picture><source srcset="img/bg-problem.webp" type="image/webp"><img src="img/bg-problem.png" alt="" width="100%"></picture>
+										</div>
+									</div>
+									<div class="body-swipp__slide swiper-slide">
+										<div class="swiper-slide__img">
+											<picture><source srcset="img/bg-problem.webp" type="image/webp"><img src="img/bg-problem.png" alt="" width="100%"></picture>
+										</div>
+									</div>
+									<div class="body-swipp__slide swiper-slide">
+										<div class="swiper-slide__img">
+											<picture><source srcset="img/bg-problem.webp" type="image/webp"><img src="img/bg-problem.png" alt="" width="100%"></picture>
+										</div>
+									</div>
+								</div>
+								<!-- Если нужна пагинация -->
+								<div class="swiper-pagination"></div>
+							</div>
+							<div class="problem-body__info info-body">
+								<div class="info-body__title">
+									<h3>
+										RiskVille is a cloud based solution designed for any type of insurance business.
+									</h3>
+								</div>
+								<div class="info-body__subtitle">
+									<p>
+										Manage your day-to-day operations including customer relationships, claims,
+										policies and risks in one system
+									</p>
+								</div>
+								<div class="info-body__button">
+									<a data-goto-header data-goto=".contacts-page" href="#contacts-page" class="info-body__btn">Schedule a Demo</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<section class="features-page" id="features-page">
+				<div class="features-page__container">
+					<div class="features-page__body body-features">
+						<div class="body-features__title">
+							<h3>
+								RiskVille Features
+							</h3>
+						</div>
+						<div class="features-page__static">
+							<div class="features-page__row first" data-watch-threshold="0.5" data-watch data-watch-once>
+								<div class="features-page__items">
+									<div class="features-page__item item-features">
+										<div class="item-features__img">
+											<picture><source srcset="img/icon-features/features-icon-1.webp" type="image/webp"><img src="img/icon-features/features-icon-1.png" alt=""></picture>
+										</div>
+										<div class="item-features__text">
+											<div class="item-features__title">
+												<h3>
+													360 Customer View
+												</h3>
+											</div>
+											<div class="item-features__subtitle">
+												<p>
+													Create unified profiles that keep all the customer data, including
+													demographics, contacts, documents, and policies. Get a holistic view
+													of historical and behavioral data like email interactions.
+												</p>
+											</div>
+										</div>
+									</div>
+									<div class="features-page__item item-features">
+										<div class="item-features__img">
+											<picture><source srcset="img/icon-features/features-icon-2.webp" type="image/webp"><img src="img/icon-features/features-icon-2.png" alt=""></picture>
+										</div>
+										<div class="item-features__text">
+											<div class="item-features__title">
+												<h3>
+													Customer Portal
+												</h3>
+											</div>
+											<div class="item-features__subtitle">
+												<p>
+													Utilize RiskVille as a portal for sharing data and documents with
+													your clients. RiskVille Customer Portal allows policyholders to edit
+													contact information, view details of their quotes and policies, add
+													assets, submit and track claims.
+												</p>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="features-page__row second" data-watch-threshold="0.5" data-watch data-watch-once>
+								<div class="features-page__items">
+									<div class="features-page__item item-features">
+										<div class="item-features__img">
+											<picture><source srcset="img/icon-features/features-icon-3.webp" type="image/webp"><img src="img/icon-features/features-icon-3.png" alt=""></picture>
+										</div>
+										<div class="item-features__text">
+											<div class="item-features__title">
+												<h3>
+													Rating, Quoting and Billing
+												</h3>
+											</div>
+											<div class="item-features__subtitle">
+												<p>
+													Conduct rate analysis and pricing for any insurance product,
+													standardize quotes, calculate premiums, and taxes. Manage
+													underwriting rules by following information on possible risks and
+													threats.
+												</p>
+											</div>
+										</div>
+									</div>
+									<div class="features-page__item item-features">
+										<div class="item-features__img">
+											<picture><source srcset="img/icon-features/features-icon-4.webp" type="image/webp"><img src="img/icon-features/features-icon-4.png" alt=""></picture>
+										</div>
+										<div class="item-features__text">
+											<div class="item-features__title">
+												<h3>
+													Policy Management
+												</h3>
+											</div>
+											<div class="item-features__subtitle">
+												<p>
+													Get standard policy templates that can be issued upon binding.
+													Create policies with different risk coverage and compliance, check
+													policies, monitor renewals, prepare reports, renew policies
+													automatically.
+												</p>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="features-page__row third" data-watch-threshold="0.5" data-watch data-watch-once>
+								<div class="features-page__items">
+									<div class="features-page__item item-features">
+										<div class="item-features__img">
+											<picture><source srcset="img/icon-features/features-icon-5.webp" type="image/webp"><img src="img/icon-features/features-icon-5.png" alt=""></picture>
+										</div>
+										<div class="item-features__text">
+											<div class="item-features__title">
+												<h3>
+													Certificates Issuance
+												</h3>
+											</div>
+											<div class="item-features__subtitle">
+												<p>
+													Upon the holder’s request, provide quick verification of the policy
+													existence by allowing a holder to get a certificate of insurance
+													(COI) online. The certificate can be printed directly from
+													RiskVille.
+												</p>
+											</div>
+										</div>
+									</div>
+									<div class="features-page__item item-features">
+										<div class="item-features__img">
+											<picture><source srcset="img/icon-features/features-icon-6.webp" type="image/webp"><img src="img/icon-features/features-icon-6.png" alt=""></picture>
+										</div>
+										<div class="item-features__text">
+											<div class="item-features__title">
+												<h3>
+													Risk Management
+												</h3>
+											</div>
+											<div class="item-features__subtitle">
+												<p>
+													Use a comprehensive set of tools for risk management, including risk
+													monitoring, identification, assessment, and reporting. Calculate
+													risks for all types of assets and allocate the relevant premiums.
+												</p>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="features-page__last-child" data-watch-threshold="0.5" data-watch data-watch-once>
+								<div class="features-page__item item-features">
+									<div class="item-features__img">
+										<picture><source srcset="img/icon-features/features-icon-3.webp" type="image/webp"><img src="img/icon-features/features-icon-3.png" alt=""></picture>
+									</div>
+									<div class="item-features__text">
+										<div class="item-features__title">
+											<h3>
+												Claims Management
+											</h3>
+										</div>
+										<div class="item-features__subtitle">
+											<p>
+												All customers have access to report claims online. Report
+												forms can be customized according to your specific needs.
+												Get notifications about incoming claims to always be on the
+												same page with customers.
+											</p>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="features-page__agile agli-features">
+							<!-- Оболочка слайдера -->
+							<div class="agli-features__slider Swiper-3">
+								<!-- Двигающееся часть слайдера -->
+								<div class="agli-features__wrapper swiper-wrapper">
+									<!-- Слайд -->
+									<div class="agli-features__slide swiper-slide">
+										<div class="swiper-slide__items">
+											<div class="swiper-slide__item-features item-slide-features">
+												<div class="item-slide-features__img">
+													<picture><source srcset="img/icon-features/features-icon-1.webp" type="image/webp"><img src="img/icon-features/features-icon-1.png" alt=""></picture>
+												</div>
+												<div class="item-slide-features__text">
+													<div class="item-slide-features__title">
+														<h3>
+															360 Customer View
+														</h3>
+													</div>
+													<div class="item-slide-features__subtitle">
+														<p>
+															Create unified profiles that keep all the customer data,
+															including demographics, contacts, documents, and policies.
+															Get a
+															holistic view of historical and behavioral data like email
+															interactions.
+														</p>
+													</div>
+												</div>
+											</div>
+											<div class="swiper-slide__item-features item-slide-features">
+												<div class="item-slide-features__img">
+													<picture><source srcset="img/icon-features/features-icon-3.webp" type="image/webp"><img src="img/icon-features/features-icon-3.png" alt=""></picture>
+												</div>
+												<div class="item-slide-features__text">
+													<div class="item-slide-features__title">
+														<h3>
+															Rating, Quoting and Billing
+														</h3>
+													</div>
+													<div class="item-slide-features__subtitle">
+														<p>
+															Conduct rate analysis and pricing for any insurance product,
+															standardize quotes, calculate premiums, and taxes. Manage
+															underwriting rules by following information on possible
+															risks
+															and threats.
+														</p>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="agli-features__slide swiper-slide">
+										<div class="swiper-slide__items">
+											<div class="swiper-slide__item-features item-slide-features">
+												<div class="item-slide-features__img">
+													<picture><source srcset="img/icon-features/features-icon-5.webp" type="image/webp"><img src="img/icon-features/features-icon-5.png" alt=""></picture>
+												</div>
+												<div class="item-slide-features__text">
+													<div class="item-slide-features__title">
+														<h3>
+															Certificates Issuance
+														</h3>
+													</div>
+													<div class="item-slide-features__subtitle">
+														<p>
+															Upon the holder’s request, provide quick verification of the
+															policy existence by allowing a holder to get a certificate
+															of
+															insurance (COI) online. The certificate can be printed
+															directly
+															from RiskVille.
+														</p>
+													</div>
+												</div>
+											</div>
+											<div class="swiper-slide__item-features item-slide-features">
+												<div class="item-slide-features__img">
+													<picture><source srcset="img/icon-features/features-icon-2.webp" type="image/webp"><img src="img/icon-features/features-icon-2.png" alt=""></picture>
+												</div>
+												<div class="item-slide-features__text">
+													<div class="item-slide-features__title">
+														<h3>
+															Customer Portal
+														</h3>
+													</div>
+													<div class="item-slide-features__subtitle">
+														<p>
+															Utilize RiskVille as a portal for sharing data and documents
+															with your clients. RiskVille Customer Portal allows
+															policyholders to edit contact information, view details of
+															their
+															quotes and policies, add assets, submit and track claims.
+														</p>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="agli-features__slide swiper-slide">
+										<div class="swiper-slide__items">
+											<div class="swiper-slide__item-features item-slide-features">
+												<div class="item-slide-features__img">
+													<picture><source srcset="img/icon-features/features-icon-4.webp" type="image/webp"><img src="img/icon-features/features-icon-4.png" alt=""></picture>
+												</div>
+												<div class="item-slide-features__text">
+													<div class="item-slide-features__title">
+														<h3>
+															Policy Management
+														</h3>
+													</div>
+													<div class="item-slide-features__subtitle">
+														<p>
+															Get standard policy templates that can be issued upon
+															binding.
+															Create policies with different risk coverage and compliance,
+															check policies, monitor renewals, prepare reports, renew
+															policies automatically.
+														</p>
+													</div>
+												</div>
+											</div>
+											<div class="swiper-slide__item-features item-slide-features">
+												<div class="item-slide-features__img">
+													<picture><source srcset="img/icon-features/features-icon-6.webp" type="image/webp"><img src="img/icon-features/features-icon-6.png" alt=""></picture>
+												</div>
+												<div class="item-slide-features__text">
+													<div class="item-slide-features__title">
+														<h3>
+															Risk Management
+														</h3>
+													</div>
+													<div class="item-slide-features__subtitle">
+														<p>
+															Use a comprehensive set of tools for risk management,
+															including
+															risk monitoring, identification, assessment, and reporting.
+															Calculate risks for all types of assets and allocate the
+															relevant premiums.
+														</p>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="agli-features__slide swiper-slide">
+										<div class="swiper-slide__items">
+											<div class="swiper-slide__item-features item-slide-features">
+												<div class="item-slide-features__img">
+													<picture><source srcset="img/icon-features/features-icon-7.webp" type="image/webp"><img src="img/icon-features/features-icon-7.png" alt=""></picture>
+												</div>
+												<div class="item-slide-features__text">
+													<div class="item-slide-features__title">
+														<h3>
+															Claims Management
+														</h3>
+													</div>
+													<div class="item-slide-features__subtitle">
+														<p>
+															All customers have access to report claims online. Report
+															forms
+															can be customized according to your specific needs. Get
+															notifications about incoming claims to always be on the same
+															page with customers.
+														</p>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<!-- Если нужна пагинация -->
+								<div class="swiper-pagination"></div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="features-page__bg" data-watch-threshold="0.5" data-watch>
+					<picture><source srcset="img/icon-features/features-bg.webp" type="image/webp"><img src="img/icon-features/features-bg.png" alt="" width="100%"></picture>
+				</div>
+			</section>
+			<section class="benefits-page" id="benefits-page">
+				<div class="benefits-page__container">
+					<div class="benefits-page__title">
+						<h3>
+							Benefits for your business
+						</h3>
+					</div>
+					<div class="benefits-page__items">
+						<div class="benefits-page__item item-benefits-1">
+							<h4>PROCESS CLAIMS FASTER</h4>
+						</div>
+						<div class="benefits-page__item item-benefits-2">
+							<h4>ELIMINATE HUMAN FACTOR</h4>
+						</div>
+						<div class="benefits-page__item item-benefits-3">
+							<h4>INCREASE CUSTOMER SATISFACTION AND LOYALTY</h4>
+						</div>
+						<div class="benefits-page__item item-benefits-4">
+							<h4>REDUCE MANUAL WORK</h4>
+						</div>
+						<div class="benefits-page__item item-benefits-5">
+							<h4>ENHANCE CUSTOMER SELF-SERVICE</h4>
+						</div>
+						<div class="benefits-page__item item-benefits-6">
+							<h4>ENSURE EXCELLENT CUSTOMER EXPERIENCE</h4>
+						</div>
+					</div>
+				</div>
+				<div class="benefits-page__bg">
+					<picture><source srcset="img/benefits-bg.webp" type="image/webp"><img src="img/benefits-bg.png" alt=""></picture>
+				</div>
+			</section>
+			<section class="why-riskVille-page" id="why-riskVille-page">
+				<div class="why-riskVille-page__container">
+					<div class="why-riskVille-page__body">
+						<div class="why-riskVille-page__title">
+							<h3>
+								Why RiskVille?
+							</h3>
+						</div>
+						<div class="why-riskVille-page__static">
+							<div class="why-riskVille-page__items">
+								<div class="why-riskVille-page__item item-why item-1" data-watch-once data-watch-threshold="0.5" data-watch>
+									<div class="item-why__top">
+										<picture><source srcset="img/icon-why-riskville/icon-1.webp" type="image/webp"><img src="img/icon-why-riskville/icon-1.png" alt=""></picture>
+									</div>
+									<div class="item-why__bottom">
+										<div class="item-why__title">
+											<h3>
+												No hidden
+												costs
+											</h3>
+										</div>
+										<div class="item-why__subtitle">
+											<p>
+												All we need to know to quote a gruaranteed license cost is the number of
+												users.
+											</p>
+										</div>
+									</div>
+								</div>
+								<div class="why-riskVille-page__item item-why item-2" data-watch-once data-watch-threshold="0.5" data-watch>
+									<div class="item-why__top">
+										<picture><source srcset="img/icon-why-riskville/icon-2.webp" type="image/webp"><img src="img/icon-why-riskville/icon-2.png" alt=""></picture>
+									</div>
+									<div class="item-why__bottom">
+										<div class="item-why__title">
+											<h3>
+												Fast
+												Implementation
+											</h3>
+										</div>
+										<div class="item-why__subtitle">
+											<p>
+												New captives or product-lines can be implemented in a few days
+											</p>
+										</div>
+									</div>
+								</div>
+								<div class="why-riskVille-page__item item-why item-3" data-watch-once data-watch-threshold="0.5" data-watch>
+									<div class="item-why__top">
+										<picture><source srcset="img/icon-why-riskville/icon-3.webp" type="image/webp"><img src="img/icon-why-riskville/icon-3.png" alt=""></picture>
+									</div>
+									<div class="item-why__bottom">
+										<div class="item-why__title">
+											<h3>
+												Customization without developers
+											</h3>
+										</div>
+										<div class="item-why__subtitle">
+											<p>
+												Customizable options at no additional cost
+											</p>
+										</div>
+									</div>
+								</div>
+								<div class="why-riskVille-page__item item-why item-4" data-watch-once data-watch-threshold="0.5" data-watch>
+									<div class="item-why__top">
+										<picture><source srcset="img/icon-why-riskville/icon-4.webp" type="image/webp"><img src="img/icon-why-riskville/icon-4.png" alt=""></picture>
+									</div>
+									<div class="item-why__bottom">
+										<div class="item-why__title">
+											<h3>
+												Secure
+												and compliant
+											</h3>
+										</div>
+										<div class="item-why__subtitle">
+											<p>
+												Hosted on the safe and secure Microsoft Azure platform; GDPR compliant
+											</p>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="why-riskVille-page__agile">
+							<div class="why-riskVille-page__agile agile-swipper">
+								<!-- Оболочка слайдера -->
+								<div class="agile-swipper__slider Swiper-2">
+									<!-- Двигающееся часть слайдера -->
+									<div class="agile-swipper__wrapper swiper-wrapper">
+										<!-- Слайд -->
+										<div class="agile-swipper__slide swiper-slide">
+											<div class="swiper-slide__item item-slide">
+												<div class="item-slide__top">
+													<picture><source srcset="img/icon-why-riskville/icon-1.webp" type="image/webp"><img src="img/icon-why-riskville/icon-1.png" alt=""></picture>
+												</div>
+												<div class="item-slide__bottom">
+													<div class="item-slide__title">
+														<h3>
+															No hidden
+															costs
+														</h3>
+													</div>
+													<div class="item-slide__subtitle">
+														<p>
+															All we need to know to quote a gruaranteed license cost is
+															the number of users.
+														</p>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="agile-swipper__slide swiper-slide">
+											<div class="swiper-slide__item item-slide">
+												<div class="item-slide__top">
+													<picture><source srcset="img/icon-why-riskville/icon-2.webp" type="image/webp"><img src="img/icon-why-riskville/icon-2.png" alt=""></picture>
+												</div>
+												<div class="item-slide__bottom">
+													<div class="item-slide__title">
+														<h3>
+															Fast
+															Implementation
+														</h3>
+													</div>
+													<div class="item-slide__subtitle">
+														<p>
+															New captives or product-lines can be implemented in a few
+															days
+														</p>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="agile-swipper__slide swiper-slide">
+											<div class="swiper-slide__item item-slide">
+												<div class="item-slide__top">
+													<picture><source srcset="img/icon-why-riskville/icon-3.webp" type="image/webp"><img src="img/icon-why-riskville/icon-3.png" alt=""></picture>
+												</div>
+												<div class="item-slide__bottom">
+													<div class="item-slide__title">
+														<h3>
+															Customization without developers
+														</h3>
+													</div>
+													<div class="item-slide__subtitle">
+														<p>
+															Customizable options at no additional cost
+														</p>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="agile-swipper__slide swiper-slide">
+											<div class="swiper-slide__item item-slide">
+												<div class="item-slide__top">
+													<picture><source srcset="img/icon-why-riskville/icon-4.webp" type="image/webp"><img src="img/icon-why-riskville/icon-4.png" alt=""></picture>
+												</div>
+												<div class="item-slide__bottom">
+													<div class="item-slide__title">
+														<h3>
+															Secure
+															and compliant
+														</h3>
+													</div>
+													<div class="item-slide__subtitle">
+														<p>
+															Hosted on the safe and secure Microsoft Azure platform; GDPR
+															compliant
+														</p>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<!-- Если нужна пагинация -->
+									<div class="swiper-pagination"></div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="why-riskVille-page__bg">
+					<picture><source srcset="img/icon-why-riskville/bg-why-riskville.webp" type="image/webp"><img src="img/icon-why-riskville/bg-why-riskville.png" alt=""></picture>
+				</div>
+				<div class="why-riskVille-page__bg2">
+					<picture><source srcset="img/icon-why-riskville/bg-why-riskville-2.webp" type="image/webp"><img src="img/icon-why-riskville/bg-why-riskville-2.png" alt=""></picture>
+				</div>
+			</section>
+			<section class="information-page" id="information-page">
+				<div class="information-page__container">
+					<div class="information-page__body" data-watch-once data-watch-threshold="0.5" data-watch>
+						<div class="information-page__title">
+
+							<h3>
+								Get timely information.Get rid
+								of paperwork.Get living.
+							</h3>
+						</div>
+						<div class="information-page__subtitle">
+							<p>
+								Be flexible with RiskVille, satisfy operational demands and respond to reporting
+								requests from your parent company
+							</p>
+						</div>
+						<div class="information-page__button">
+							<a data-goto-header data-goto=".contacts-page" href="#contacts-page" class="information-page__btn orange">Schedule a Demo</a>
+							<a data-goto-header data-goto=".contacts-page" href="#contacts-page" class="information-page__btn transparent">Contact us</a>
+						</div>
+					</div>
+				</div>
+				<div class="information-page__bg"></div>
+			</section>
+			<section class="clients-page" id="clients-page">
+				<div class="clients-page__container">
+					<div class="clients-page__slider Swiper-4">
+						<div class="clients-page__wrapper swiper-wrapper">
+							<div class="clients-page__slide swiper-slide" data-watch-threshold="0.5" data-watch data-watch-once>
+								<div class="clients-swiper-slide__body clients-body-slide">
+									<div class="clients-body-slide__img">
+										<picture><source srcset="img/clients-1.webp" type="image/webp"><img src="img/clients-1.png" alt=""></picture>
+									</div>
+									<div class="clients-body-slide__text">
+										<div class="clients-body-slide__title">
+											<h3>Our clients trust us</h3>
+										</div>
+										<div class="clients-body-slide__subtitle">
+											<p>
+												“Be flexible with RiskVille, satisfy operational demands and respond
+												to reporting requests from your parent company Be flexible with
+												RiskVille, satisfy operational demands and respond to reporting
+												requests from your parent company”
+											</p>
+										</div>
+										<div class="clients-body-slide__row">
+											<div class="clients-body-slide__full-name">
+												<h3>
+													Geoff Still
+												</h3>
+												<ul>
+													<li>TABS Insurance</li>
+													<li>Vice President Finance &Operations</li>
+												</ul>
+											</div>
+											<div class="clients-body-slide__button">
+												<button data-popup="#popup" class="clients-body-slide__btn">Get case
+													study</button>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="clients-page__slide swiper-slide">
+								<div class="clients-swiper-slide__body clients-body-slide">
+									<div class="clients-body-slide__img">
+										<picture><source srcset="img/clients-1.webp" type="image/webp"><img src="img/clients-1.png" alt=""></picture>
+									</div>
+									<div class="clients-body-slide__text">
+										<div class="clients-body-slide__title">
+											<h3>Our clients trust us</h3>
+										</div>
+										<div class="clients-body-slide__subtitle">
+											<p>
+												“Be flexible with RiskVille, satisfy operational demands and respond
+												to reporting requests from your parent company Be flexible with
+												RiskVille, satisfy operational demands and respond to reporting
+												requests from your parent company”
+											</p>
+										</div>
+										<div class="clients-body-slide__row">
+											<div class="clients-body-slide__full-name">
+												<h3>
+													Geoff Still
+												</h3>
+												<ul>
+													<li>TABS Insurance</li>
+													<li>Vice President Finance &Operations</li>
+												</ul>
+											</div>
+											<div class="clients-body-slide__button">
+												<button data-popup="#popup" class="clients-body-slide__btn">Get case
+													study</button>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="clients-page__slide swiper-slide">
+								<div class="clients-swiper-slide__body clients-body-slide">
+									<div class="clients-body-slide__img">
+										<picture><source srcset="img/clients-1.webp" type="image/webp"><img src="img/clients-1.png" alt=""></picture>
+									</div>
+									<div class="clients-body-slide__text">
+										<div class="clients-body-slide__title">
+											<h3>Our clients trust us</h3>
+										</div>
+										<div class="clients-body-slide__subtitle">
+											<p>
+												“Be flexible with RiskVille, satisfy operational demands and respond
+												to reporting requests from your parent company Be flexible with
+												RiskVille, satisfy operational demands and respond to reporting
+												requests from your parent company”
+											</p>
+										</div>
+										<div class="clients-body-slide__row">
+											<div class="clients-body-slide__full-name">
+												<h3>
+													Geoff Still
+												</h3>
+												<ul>
+													<li>TABS Insurance</li>
+													<li>Vice President Finance &Operations</li>
+												</ul>
+											</div>
+											<div class="clients-body-slide__button">
+												<button data-popup="#popup" class="clients-body-slide__btn">Get case
+													study</button>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="clients-page__slide swiper-slide">
+								<div class="clients-swiper-slide__body clients-body-slide">
+									<div class="clients-body-slide__img">
+										<picture><source srcset="img/clients-1.webp" type="image/webp"><img src="img/clients-1.png" alt=""></picture>
+									</div>
+									<div class="clients-body-slide__text">
+										<div class="clients-body-slide__title">
+											<h3>Our clients trust us</h3>
+										</div>
+										<div class="clients-body-slide__subtitle">
+											<p>
+												“Be flexible with RiskVille, satisfy operational demands and respond
+												to reporting requests from your parent company Be flexible with
+												RiskVille, satisfy operational demands and respond to reporting
+												requests from your parent company”
+											</p>
+										</div>
+										<div class="clients-body-slide__row">
+											<div class="clients-body-slide__full-name">
+												<h3>
+													Geoff Still
+												</h3>
+												<ul>
+													<li>TABS Insurance</li>
+													<li>Vice President Finance &Operations</li>
+												</ul>
+											</div>
+											<div class="clients-body-slide__button">
+												<button data-popup="#popup" class="clients-body-slide__btn">Get case
+													study</button>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
 						<div class="swiper-pagination"></div>
-						<div class="swiper-button-prev">
-							<a href="#"></a>
+						<div class="clients-body-slide__button-second">
+							<button class="clients-body-slide__btn" data-popup="#popup">Get case study</button>
 						</div>
-						<div class="swiper-scrollbar"></div>
 					</div>
 				</div>
 			</section>
-			<section class="kickstart">
-				<div class="kickstart__container">
-					<div class="kickstart__title">
-						<h3>
-							Kickstart hiring
-						</h3>
-						<h3>
-							with Homerun templates.
-						</h3>
-					</div>
-					<div class="kickstart__text">
-						<p>
-							Ready to use job templates to help you with
-						</p>
-						<p>
-							the hardest parts of creating a job post.
-						</p>
-					</div>
-					<div class="kickstart__bg">
-						<picture>
-							<source srcset="img/kickstart_bg.webp" type="image/webp"><img
-								src="img/kickstart_bg.png?_v=1658227686739" alt="">
-						</picture>
+			<section class="news-page" id="news-page">
+				<div class="news-page__container">
+					<div class="news-page__body">
+						<div class="news-page__title">
+							<h3>
+								newscast
+							</h3>
+						</div>
+						<div class="news-page__items">
+							<div class="news-page__item item-news active">
+								<div class="item-news__img">
+
+								</div>
+								<div class="item-news__bg">
+									<div class="item-news__subtitle">
+										<span>news</span>
+									</div>
+									<div class="item-news__title">
+										<h3>
+											No coding =
+											No needle
+											in the arm
+										</h3>
+									</div>
+									<div class="item-news__text">
+										<p>
+											RiskVille is a versatile cloud solution that can be adapted to your business
+											without special development. The customization is done via data and
+											templates...
+										</p>
+									</div>
+									<div class="item-news__link">
+										<a href="">Read more</a>
+									</div>
+								</div>
+							</div>
+							<div class="news-page__item item-news">
+								<div class="item-news__img">
+
+								</div>
+								<div class="item-news__bg">
+									<div class="item-news__subtitle">
+										<span>news</span>
+									</div>
+									<div class="item-news__title">
+										<h3>
+											RiskVille
+											ADVANTAGES
+										</h3>
+									</div>
+									<div class="item-news__text">
+										<p>
+											Including no special development, RiskVille can be implemented in less than
+											2 weeks...
+										</p>
+									</div>
+									<div class="item-news__link">
+										<a href="">Read more</a>
+									</div>
+								</div>
+							</div>
+							<div class="news-page__item item-news">
+								<div class="item-news__img">
+								</div>
+								<div class="item-news__bg">
+									<div class="item-news__subtitle">
+										<span>news</span>
+									</div>
+									<div class="item-news__title">
+										<h3>
+											ENDORSEMENT
+										</h3>
+									</div>
+									<div class="item-news__text">
+										<p>
+											At RiskVille we consider the close relantionship beetween our solution
+											and
+											our clients everyday bussiness..
+										</p>
+									</div>
+									<div class="item-news__link">
+										<a href="">Read more</a>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="news-page__button">
+							<a href="news.html" class="news-page__btn">View all</a>
+						</div>
 					</div>
 				</div>
 			</section>
-			<section class="stars">
-				<div class="stars__container">
-					<div class="stars__items items-stars">
-						<div class="item-stars">
-							<div class="item-stars__logo">
-								<picture>
-									<source srcset="img/stars_logo.webp" type="image/webp"><img
-										src="img/stars_logo.png?_v=1658227686739" alt="">
-								</picture>
-							</div>
-							<div class="item-stars__num">
-								<span>4,5</span>
-							</div>
-							<div class="item-stars__rating">
-								<picture>
-									<source srcset="img/rating.webp" type="image/webp"><img
-										src="img/rating.png?_v=1658227686739" alt="">
-								</picture>
-							</div>
-							<div class="item-stars__info">
-								<p>
-									Average review on Capterra,
-								</p>
-								<p>
-									independent review site
-								</p>
-							</div>
+			<section class="contacts-page" id="contacts-page">
+				<div class="contacts-page__container">
+					<div class="contacts-page__body">
+						<div class="contacts-page__bg" data-watch-once data-watch-threshold="0.5" data-watch>
+							<picture><source srcset="img/contacts-bg.webp" type="image/webp"><img src="img/contacts-bg.png" alt=""></picture>
 						</div>
-						<div class="item-stars">
-							<div class="item-stars__logo">
-								<picture>
-									<source srcset="img/stars_logo_2.webp" type="image/webp"><img
-										src="img/stars_logo_2.png?_v=1658227686739" alt="">
-								</picture>
+						<div class="contacts-page__bg-2">
+							<picture><source srcset="img/contacts-bg-2.webp" type="image/webp"><img src="img/contacts-bg-2.png" alt=""></picture>
+						</div>
+						<form action="#" class="contacts-page__form form-contatcts" data-watch-once data-watch-threshold="0.5" data-watch>
+							<div class="form-contatcts__title">
+								<h3>
+									Write us
+								</h3>
 							</div>
-							<div class="item-stars__num">
-								<span>98,8%</span>
+							<div class="form-contatcts__email">
+								<label for="email-contacts">Email</label>
+								<input type="text" placeholder="" id="email-contacts" class="form-contatcts__input" data-validate data-required="email" data-required="email" data-error="Enter the correct Email">
 							</div>
-							<div class="item-stars__rating">
-								<picture>
-									<source srcset="img/stars_smile.webp" type="image/webp"><img
-										src="img/stars_smile.png?_v=1658227686739" alt="">
-								</picture>
+							<div class="form-contatcts__textarea">
+								<h3>
+									Message
+								</h3>
+								<textarea cols="" rows="10"></textarea>
 							</div>
-							<div class="item-stars__info">
+							<div class="form-contatcts__message">
 								<p>
-									Average rating based on
-								</p>
-								<p>
-									1500+ support conversations
+									* Feel free to contact us and we will get back to you within 24 hours
 								</p>
 							</div>
-						</div>
-					</div>
-					<div class="stars__body body-stars">
-						<h4>new</h4>
-						<div class="body-stars__logo">
-							<img src="img/stars_body.svg?_v=1658227686739" alt="">
-						</div>
-						<div class="body-stars__title">
-							<h3>
-								Start your free
-							</h3>
-							<h3>
-								Homerun trial today
-							</h3>
-						</div>
-						<a class="body-stars__btn" href="#">Start free trial</a>
-						<div class="body-stars__footer">
-							<p class="body-stars__subtitle">
-								Totally free for 15 days
-							</p>
-							<p class="body-stars__subtitle">
-								No credit card needed
-							</p>
-						</div>
+							<div class="form-contatcts__button">
+								<button type="submit" class="form-contatcts__ntb">Send Message</button>
+							</div>
+						</form>
 					</div>
 				</div>
 			</section>
 		</main>
-	</div>
-	<footer class="footer">
-		<div class="footer-top">
-			<div class="footer-top__container">
-				<a href="#" class="footer-top__logo">
-					<img src="img/footer-logo.svg?_v=1658227686739" alt="">
-				</a>
-				<a class="footer-top__btn btn__blue" href="#">Start free trial</a>
-			</div>
-		</div>
-		<div class="footer-bottom">
-			<div class="footer-bottom__container">
-				<nav class="footer-bottom__menu">
-					<ul class="footer-bottom__list">
-						<div class="footer-bottom__title">
-							<h3>Product</h3>
+		<footer class="footer-page">
+			<div class="footer-page__container">
+				<div class="footer-page__top ">
+					<div class="footer-page__logo">
+						<a href="">
+							<picture><source srcset="img/footer-logo.webp" type="image/webp"><img src="img/footer-logo.png" alt=""></picture>
+						</a>
+					</div>
+					<div class="footer-page__menu menu-footer">
+						<div class="menu-footer__body">
+							<ul class="menu-footer__list">
+								<li class="menu-footer__item">
+									<a data-goto-header data-goto=".about-page" href="#about-page" class="menu-footer__link">
+										About
+									</a>
+								</li>
+								<li class="menu-footer__item">
+									<a data-goto-header data-goto=".problem-page" href="#problem-page" class="menu-footer__link">
+										Problem
+									</a>
+								</li>
+								<li class="menu-footer__item">
+									<a data-goto-header data-goto="." href="#" class="menu-footer__link">
+										Solution
+									</a>
+								</li>
+								<li class="menu-footer__item">
+									<a data-goto-header data-goto=".benefits-page" href="#benefits-page" class="menu-footer__link">
+										Benefits
+									</a>
+								</li>
+								<li class="menu-footer__item">
+									<a data-goto-header data-goto=".why-riskVille-page" href="#why-riskVille-page" class="menu-footer__link">
+										Testimonials
+									</a>
+								</li>
+								<li class="menu-footer__item">
+									<a data-goto-header data-goto=".contacts-page" href="#contacts-page" class="menu-footer__link">
+										Contacts
+									</a>
+								</li>
+								<li class="menu-footer__item">
+									<a href="news.html" class="menu-footer__link">
+										News
+									</a>
+								</li>
+							</ul>
 						</div>
-						<li class="footer-bottom__item">
-							<a href="" class="footer-bottom__link">Hire</a>
-						</li>
-						<li class="footer-bottom__item">
-							<a href="" class="footer-bottom__link">Create</a>
-						</li>
-						<li class="footer-bottom__item">
-							<a href="" class="footer-bottom__link">Templates</a>
-						</li>
-						<li class="footer-bottom__item">
-							<a href="" class="footer-bottom__link">All features</a>
-						</li>
-					</ul>
-					<ul class="footer-bottom__list">
-						<div class="footer-bottom__title">
-							<h3>Learn</h3>
+					</div>
+					<div class="footer-page__button">
+						<a href="#contacts-page" class="footer-page__btn btn-footer">Schedule a Demo</a>
+					</div>
+				</div>
+				<div class="footer-center-line">
+					<div class="footer-center-line__arrow"></div>
+					<div class="footer-center-line__button">
+						<a href="#contacts-page" class="footer-center-line__btn btn-footer">Schedule a Demo</a>
+					</div>
+				</div>
+				<div class="footer-bottom">
+					<div class="footer-bottom__items">
+						<div class="footer-bottom__item item-footer">
+							<div class="footer-page__logo-2">
+								<a href="">
+									<picture><source srcset="img/footer-logo.webp" type="image/webp"><img src="img/footer-logo.png" alt=""></picture>
+								</a>
+							</div>
 						</div>
-						<li class="footer-bottom__item">
-							<a href="" class="footer-bottom__link">Blog</a>
-						</li>
-						<li class="footer-bottom__item">
-							<a href="" class="footer-bottom__link">Help Center</a>
-						</li>
-
-						<li class="footer-bottom__item">
-							<a href="" class="footer-bottom__link">Remote Hiring</a>
-						</li>
-						<li class="footer-bottom__item">
-							<a href="" class="footer-bottom__link">Employer Branding</a>
-						</li>
-					</ul>
-					<ul class="footer-bottom__list">
-						<div class="footer-bottom__title">
-							<h3>About Homerun</h3>
+						<div class="footer-bottom__item item-footer">
+							<div class="item-footer__country">
+								<span>USA</span>
+							</div>
+							<div class="item-footer__email">
+								<span>info@riskville.com</span>
+							</div>
+							<div class="item-footer__phone">
+								<span>+1 650 425-77-66</span>
+							</div>
+							<div class="item-footer__text">
+								<p>
+									Clifton Building 2661 Executive Center Circle US, Tallahassee, FL 32301
+								</p>
+							</div>
 						</div>
-						<li class="footer-bottom__item">
-							<a href="" class="footer-bottom__link">About us</a>
-						</li>
-						<li class="footer-bottom__item">
-							<a href="" class="footer-bottom__link">We're hiring</a>
-						</li>
-						<li class="footer-bottom__item">
-							<a href="" class="footer-bottom__link">Contact us</a>
-						</li>
-						<li class="footer-bottom__item">
-							<a href="" class="footer-bottom__link">Terms</a>
-						</li>
-					</ul>
-				</nav>
-				<div class="footer-bottom__contacts">
-					<a href=""><img src="img/footer-contacts.svg?_v=1658227686739" alt=""></a>
-					<a href=""><img src="img/footer-contacts_2.svg?_v=1658227686739" alt=""></a>
-					<a href=""><img src="img/footer-contacts_3.svg?_v=1658227686739" alt=""></a>
+						<div class="footer-bottom__item item-footer">
+							<div class="item-footer__country">
+								<span> IRELAND</span>
+							</div>
+							<div class="item-footer__email">
+								<span>info@riskville.com</span>
+							</div>
+							<div class="item-footer__phone">
+								<span>+44 7557 344 053</span>
+							</div>
+							<div class="item-footer__text">
+								<p>
+									Dublin Broadmeadow Hall, Applewood Village, Swords
+								</p>
+							</div>
+						</div>
+						<div class="footer-bottom__item item-footer">
+							<div class="item-footer__country">
+								<span>DENMARK</span>
+							</div>
+							<div class="item-footer__email">
+								<span>info@riskville.com</span>
+							</div>
+							<div class="item-footer__phone">
+								<span>+45 3156 2900</span>
+							</div>
+							<div class="item-footer__text">
+								<p>
+									Copenhagen
+								</p>
+							</div>
+						</div>
+					</div>
+					<div class="footer-botoom__line"></div>
+					<div class="footer-bottom__map">
+						<picture><source srcset="img/footer-map.webp" type="image/webp"><img src="img/footer-map.png" alt=""></picture>
+					</div>
+					<div class="footer-bottom__map-2">
+						<picture><source srcset="img/footer-map-2.webp" type="image/webp"><img src="img/footer-map-2.png" alt=""></picture>
+					</div>
+				</div>
+				<div class="footer-social">
+					<div class="footer-social__icon">
+						<a href=""><img src="img/footer-linkedin.svg" alt=""></a>
+						<a href=""><img src="img/footer-facebook.svg" alt=""></a>
+						<a href=""><img src="img/footer-twitter.svg" alt=""></a>
+					</div>
+					<div class="footer-social__subtitle">
+						<span>© 2020 Lift Media. All rights reserved</span>
+					</div>
 				</div>
 			</div>
-		</div>
-	</footer>
+		</footer>
 	</div>
-	<div id="log_in" aria-hidden="true" class="popup">
-		<div class="popup__wrapper">
-			<div class="popup__content">
-				<form action="#" class="form-popap popap">
-					<div class="popap__title">
-						<h3>Registration</h3>
-					</div>
-					<button data-close type="button" class="popup__close"><span></span></button>
-					<div class="popap__login">
-						<label for="log">Login</label>
-						<input autocomplete="off" type="text" id="log" data-error="Ошибка"
-							placeholder="sydorenko8166@gmail.com" class="popap__input-login">
-					</div>
-					<div class="popap__password">
-						<label for="pass">Password</label>
-						<input autocomplete="off" type="password" id="pass" data-error="Ошибка" placeholder="********"
-							class="popap__input-password">
-					</div>
-					<div class="popap__user">
-						<label for="people">Man</label>
-						<input autocomplete="off" type="radio" id="people" name="radio" data-error="Ошибка"
-							class="popap__input-radio">
-						<label for="people">Woman</label>
-						<input autocomplete="off" type="radio" id="people" name="radio" data-error="Ошибка"
-							class="popap__input-radio">
-					</div>
-					<div class="popap__create">
-						<button type="submit" class="create__button">Create</button>
-					</div>
-				</form>
-			</div>
-		</div>
-	</div>
-	<script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
-	<script src="js/app.min.js?_v=20220719134806"></script>
+	<script src="js/app.min.js?_v=20230329174350"></script>
 </body>
 
 </html>
